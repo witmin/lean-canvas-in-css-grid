@@ -1,3 +1,12 @@
+$size-5: 1rem;
+$size-6: .875rem;
+$size-7: .75rem;
+
+$heading-color: #303a40;
+$help-text-color: #818e9c;
+
+$border-color: #818e9c;
+
 * {
   margin: 0;
   padding: 0;
@@ -5,12 +14,18 @@
 }
 
 body {
+  font-size: 16px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
   'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  [lang="zh-hans"] {
+    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Heiti SC', 'Microsoft YaHei', Arial, sans-serif
+  }
+
 }
 
 code {
@@ -93,16 +108,44 @@ code {
 }
 
 .box {
-  border: 1px solid #404040;
-  padding: .75rem 1rem;
+  border: 1px solid $border-color;
+  padding: 0 1.5rem 1rem 1.5rem;
   @media screen and (min-width: 800px) {
     &:not(:first-child) {
       border-left: 0;
     }
   }
 
-  h2 {
-    font-size: 1rem;
+  h2, h3 {
+    color: $heading-color;
+    font-size: $size-5;
     text-transform: uppercase;
+    letter-spacing: -0.02rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin: 1.5rem 0 .75rem 0;
+
+    [lang="zh-hans"] {
+      display: block;
+      font-size: $size-6;
+      letter-spacing: normal;
+    }
+  }
+
+  h3 {
+    font-size: $size-6;
+    margin: 1rem 0 .5rem 0;
+  }
+
+  .help {
+    color: $help-text-color;
+    font-size: $size-7;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  .filling-order {
+    color: $help-text-color;
+
   }
 }
