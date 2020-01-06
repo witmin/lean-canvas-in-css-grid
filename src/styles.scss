@@ -1,13 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+.canvas {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  @media screen and (min-width: 800px) {
+    grid-template-rows: 2fr 1fr;
+  }
+
+}
+
+.row {
+  display: grid;
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 800px) {
+
+
+    &.first {
+      grid-template-columns: repeat(5, 20%);
+      grid-template-rows: repeat(2, 50%);
+
+      .one {
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+      .one, .four, .seven {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .two, .three {
+        grid-column-start: 2;
+        grid-column-end: 3;
+      }
+
+      .two, .five {
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .three, .six {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        border-top: 0;
+      }
+
+      .four {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
+      .five, .six {
+        grid-column-start: 4;
+        grid-column-end: 5;
+      }
+
+      .seven {
+        grid-column-start: 5;
+        grid-column-end: 6;
+      }
+    }
+
+    &.second {
+      grid-template-columns: repeat(2, 50%);
+
+      .box {
+        border-top: 0;
+      }
+    }
+  }
+}
+
+.box {
+  border: 1px solid #404040;
+  padding: .75rem 1rem;
+  @media screen and (min-width: 800px) {
+    &:not(:first-child) {
+      border-left: 0;
+    }
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
 }
