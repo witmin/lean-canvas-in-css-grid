@@ -120,6 +120,7 @@ code {
     &:not(:first-child), &.eight {
       border-top: 0;
     }
+    min-height: 160px;
   }
   @media screen and (min-width: 800px) {
     &:not(:first-child) {
@@ -156,10 +157,12 @@ code {
   }
 
   .sub-section {
-    position: absolute;
-    bottom: 0;
-    height: 40%;
     min-height: 120px;
+    @media screen and (min-width: 800px) {
+      position: absolute;
+      bottom: 0;
+      height: 40%;
+    }
   }
 
   .filling-order {
