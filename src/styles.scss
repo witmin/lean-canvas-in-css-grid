@@ -23,13 +23,13 @@ $footer-background: #767f88;
 body {
   font-size: 16px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Droid Sans', Arial,
+  font-family: 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Droid Sans', Arial,
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   [lang="zh-hans"] {
-    font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Heiti SC', 'Microsoft YaHei', Arial, sans-serif
+    font-family: 'PingFang SC', 'Heiti SC', 'Microsoft YaHei', 'Heiti', Arial, sans-serif
   }
 
 }
