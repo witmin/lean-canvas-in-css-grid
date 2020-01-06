@@ -2,10 +2,17 @@ $size-5: 1rem;
 $size-6: .875rem;
 $size-7: .75rem;
 
+$white: #fff;
 $heading-color: #303a40;
 $help-text-color: #818e9c;
 
 $border-color: #818e9c;
+
+$filling-order-background: #ced5d9;
+
+$footer-color: #e8f7ff;
+$footer-link-color: #fff;
+$footer-background: #767f88;
 
 * {
   margin: 0;
@@ -16,8 +23,7 @@ $border-color: #818e9c;
 body {
   font-size: 16px;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Droid Sans', Arial,
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,12 +41,12 @@ code {
 
 .canvas {
   display: grid;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  background: $white;
   @media screen and (min-width: 800px) {
     grid-template-rows: 2fr 1fr;
+    height: 100vh;
   }
-
 }
 
 .row {
@@ -49,8 +55,6 @@ code {
   height: 100%;
 
   @media screen and (min-width: 800px) {
-
-
     &.first {
       grid-template-columns: repeat(5, 20%);
       grid-template-rows: repeat(2, 50%);
@@ -108,8 +112,14 @@ code {
 }
 
 .box {
+  position: relative;
   border: 1px solid $border-color;
-  padding: 0 1.5rem 1rem 1.5rem;
+  padding: 0 1rem 1rem 1rem;
+  @media screen and (max-width: 799px) {
+    &:not(:first-child), &.eight {
+      border-top: 0;
+    }
+  }
   @media screen and (min-width: 800px) {
     &:not(:first-child) {
       border-left: 0;
@@ -123,18 +133,17 @@ code {
     letter-spacing: -0.02rem;
     font-weight: bold;
     line-height: 1.3;
-    margin: 1.5rem 0 .75rem 0;
+    margin: 1rem 0 .75rem 0;
 
     [lang="zh-hans"] {
       display: block;
-      font-size: $size-6;
       letter-spacing: normal;
     }
   }
 
   h3 {
     font-size: $size-6;
-    margin: 1rem 0 .5rem 0;
+    margin: 1.75rem 0 .5rem 0;
   }
 
   .help {
@@ -145,7 +154,39 @@ code {
   }
 
   .filling-order {
-    color: $help-text-color;
+    position: absolute;
+    bottom: 1rem;
+    right: .75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    font-size: $size-7;
+    font-weight: bold;
+    line-height: 1.5rem;
+    border-radius: 4px;
+    color: $white;
+    background: $filling-order-background;
+    cursor: default;
+  }
+}
 
+.footer {
+  width: 100%;
+  padding: .75rem 1.5rem;
+  color: $footer-color;
+  background: $footer-background;
+  font-size: $size-7;
+
+  p:first-child {
+    margin-bottom: .25rem;
+
+    a {
+      color: $footer-link-color;
+      text-decoration: none;
+
+      &:hover, &:focus {
+        text-decoration: underline;
+      }
+    }
   }
 }
