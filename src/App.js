@@ -10,8 +10,10 @@ function App() {
                     <div className="box one problem">
                         <h2>Problem <span lang="zh-hans">问题</span></h2>
                         <p className="help">List your top 1-3 problems.</p>
-                        <h3>Existing alternatives <span lang="zh-hans">现有替代方案</span></h3>
-                        <p className="help">List how these problems are solved today.</p>
+                        <div className="sub-section">
+                            <h3>Existing alternatives <span lang="zh-hans">现有替代方案</span></h3>
+                            <p className="help">List how these problems are solved today.</p>
+                        </div>
                         <div className="filling-order" title="Suggested filling order 建议填写顺序">1</div>
                     </div>
 
@@ -33,8 +35,10 @@ function App() {
                     <div className="box four uni-val-prop">
                         <h2>Unique value proposition<span lang="zh-hans">独特的价值主张</span></h2>
                         <p className="help">Single, clear, compelling message that states why you are different and worth paying attention.</p>
-                        <h3>High-level concept <span lang="zh-hans">高级概念</span></h3>
-                        <p className="help">List your X for Y analogy e.g. YouTube = Flickr for videos.</p>
+                        <div className="sub-section">
+                            <h3>High-level concept <span lang="zh-hans">高级概念</span></h3>
+                            <p className="help">List your X for Y analogy e.g. YouTube = Flickr for videos.</p>
+                        </div>
                         <div className="filling-order" title="Suggested filling order 建议填写顺序">3</div>
 
                     </div>
@@ -57,8 +61,10 @@ function App() {
                     <div className="box seven customer segments">
                         <h2>Customer segments<span lang="zh-hans">客户群</span></h2>
                         <p className="help">List your target customers and users.</p>
-                        <h3>Early adopters<span lang="zh-hans">早期采用者</span></h3>
-                        <p className="help">List the characteristics of your ideal customers.</p>
+                        <div className="sub-section">
+                            <h3>Early adopters<span lang="zh-hans">早期采用者</span></h3>
+                            <p className="help">List the characteristics of your ideal customers.</p>
+                        </div>
                         <div className="filling-order" title="Suggested filling order 建议填写顺序">2</div>
                     </div>
 

@@ -4,6 +4,7 @@ $size-7: .75rem;
 
 $white: #fff;
 $heading-color: #303a40;
+$sub-heading-color: #52636d;
 $help-text-color: #818e9c;
 
 $border-color: #818e9c;
@@ -143,6 +144,7 @@ code {
 
   h3 {
     font-size: $size-6;
+    color: $sub-heading-color;
     margin: 1.75rem 0 .5rem 0;
   }
 
@@ -151,6 +153,13 @@ code {
     font-size: $size-7;
     line-height: 1.5;
     font-style: italic;
+  }
+
+  .sub-section {
+    position: absolute;
+    bottom: 0;
+    height: 40%;
+    min-height: 120px;
   }
 
   .filling-order {
